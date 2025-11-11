@@ -1,101 +1,103 @@
-<!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="the demo for showing layout of the web page">
-    <meta name="author" content="Charlie Yin">
-    <meta name="generator" content="Hugo 0.87.0">
-    <title>DemoForLeaning</title>
-
-    <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dropdowns/">-->
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-
-    </style>
-
-
-    <!-- Custom styles for this template -->
-    <link href="demo.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhiqiang Yin — Portfolio</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    section {
+      padding: 20px 60px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #004080;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+    .button {
+      display: inline-block;
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .button:hover {
+      background-color: #0059b3;
+    }
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-<!--<div class="container">
-    <div class="row-cols-xxl-4" style="border: 3px blanchedalmond solid">
-the final of ece110
+
+  <header>
+    <h1>Zhiqiang Yin</h1>
+    <div class="contact">
+      <p>📞 1-647-860-1876 | ✉️ <a href="mailto:zhiqiang.yin@mail.utoronto.ca" style="color:white;">zhiqiang.yin@mail.utoronto.ca</a></p>
+      <a href="CV.pdf" class="button" target="_blank">📄 Download CV</a>
     </div>
-    <div class = row>
-    <div class = "col-lg-4 col-md-3 col-sm-2 " style="border: 3px blanchedalmond solid">name</div>
-    <div class = "col-lg-4 col-md-3 col-sm-2 " style="border: 3px blanchedalmond solid">grade</div>
-</div>
-</div>-->
+  </header>
 
-<div id="foo\bar"> i am the king</div>
-<!--<div id="foo:bar"> yes madam</div>-->
-<h1>welcome </h1></br>
-<button>切换用户</button>
-</br>
+  <section>
+    <h2>Introduction</h2>
+    <p>
+      MEng student in Electrical and Computer Engineering with hands-on experience in distributed systems,
+      machine learning, and data-driven automation. Currently advancing skills in reinforcement learning and
+      natural language processing, with plans to explore blockchain in the upcoming term. Solid coding,
+      communication, and teamwork abilities, with a focus on applying advanced AI and computational techniques
+      to quantitative investment management.
+    </p>
 
-<img src="img/img1.png"/>
+    <h2>Education Background</h2>
+    <ul>
+      <li>
+        <strong>University of Toronto</strong>, ON, Canada<br>
+        <em>Bachelor of Applied Science in Electrical and Computer Engineering (2019.09 – 2024.06)</em><br>
+        GPA: 3.21 / 4.0
+      </li>
+      <li>
+        <strong>University of Toronto</strong>, ON, Canada<br>
+        <em>Master of Engineering (MEng) in Electrical and Computer Engineering (2025.09 – present)</em>
+      </li>
+    </ul>
 
+    <h2>Work Experience</h2>
+    <p><strong>System Testing and Automation Analyst</strong> — Ontario Ministry of Health (2022.09 – 2023.08)</p>
+    <ul>
+      <li>Created and maintained automation test scripts.</li>
+      <li>Generated test cases, verified front-end and back-end consistency, and performed regression testing.</li>
+      <li>Developed an Eclipse plugin to display test automation metrics.</li>
+    </ul>
 
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    let myButton = document.querySelector('button');
-    let myHeading = document.querySelector('h1');
+  </section>
 
-    function setUserName() {
-        let myName = prompt('请输入你的名字。');
-        if (!myName || myName === null) {
-            alert("plz enter your user name again");
-            setUserName();
+  <footer>
+    © 2025 Zhiqiang Yin — All rights reserved
+  </footer>
 
-        }
-
-
-        localStorage.setItem('name', myName);
-        myHeading.textContent = 'Mozilla 酷毙了，' + myName;
-
-    }
-
-    if (!localStorage.getItem('name') ) {
-        setUserName();
-    } else {
-        let storedName = localStorage.getItem('name');
-        myHeading.textContent = 'Mozilla 酷毙了，' + storedName;
-    }
-    myButton.onclick = function () {
-        setUserName();
-    }
-</script>
-
-<script>
-    let myImage = document.querySelector('img');
-
-    myImage.onclick = function () {
-        let mySrc = myImage.getAttribute('src');
-        if (mySrc === './img/img1.png') {
-            myImage.setAttribute('src', './img/img2.jpg');
-        } else {
-            myImage.setAttribute('src', './img/img1.png');
-        }
-    }
-
-
-    /*console.log('#foo\bar');               // "#fooar" (\b is the backspace control character)
-    //document.querySelector('#foo\bar');    // Does not match anything
-
-    console.log('#foo\\bar');              // "#foo\bar"
-    console.log('#foo\\\\bar');            // "#foo\\bar"
-   let num = document.querySelector('#foo\\\\bar'); // Match the first div
-    alert(num.textContent);*/
-    /* num =document.querySelector('#foo:bar');    // Does not match anything
-    alert(num);
-     num =document.querySelector('#foo\\:bar');  // Match the second div
-    alert(num);*/
-
-</script>
 </body>
 </html>
